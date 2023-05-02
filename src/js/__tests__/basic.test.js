@@ -1,4 +1,4 @@
-import { getStatus } from '../basic.js';
+import getStatus from '../basic.js';
 
 describe('getStatus function', () => {
   test('should return "healthy" for health > 50', () => {
