@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "npm run lint && npm test",
-    "lint": "eslint",
+    "lint": "eslint --fix --ext .js,.jsx .",
     "test": "jest --coverage"
     
   },
