@@ -1,18 +1,19 @@
-import getStatus from '../basic.js';
+import characterHealth from '../basic.js';
 
-describe('getStatus function', () => {
-  test('should return "healthy" for health > 50', () => {
-    const status = getStatus({ name: 'Маг', health: 90 });
-    expect(status).toBe('healthy');
-  });
+test('health should be healthy', () => {
+  const expected = 'healthy';
+  const received = characterHealth({ name: 'Mag', health: 70 });
+  expect(received).toBe(expected);
+});
 
-  test('should return "wounded" for health from 50 to 15', () => {
-    const status = getStatus({ name: 'Маг', health: 30 });
-    expect(status).toBe('wounded');
-  });
+test('health should be wounded', () => {
+  const expected = 'wounded';
+  const received = characterHealth({ name: 'Mag', health: 40 });
+  expect(received).toBe(expected);
+});
 
-  test('should return "critical" for health < 15', () => {
-    const status = getStatus({ name: 'Маг', health: 10 });
-    expect(status).toBe('critical');
-  });
+test('health should be critical', () => {
+  const expected = 'critical';
+  const received = characterHealth({ name: 'Mag', health: 10 });
+  expect(received).toBe(expected);
 });
