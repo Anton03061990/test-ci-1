@@ -1,4 +1,4 @@
-import characterHealth from '../basic.js';
+import characterHealth from '../basic.';
 
 test('health should be healthy', () => {
   const expected = 'healthy';
